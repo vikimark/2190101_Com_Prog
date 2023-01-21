@@ -1,3 +1,4 @@
-__pycache__
-.vscode
-01_Expr_★_Stirling_Factorial.dSYM
+__pycache__/
+.vscode/
+01_Expr_★_Stirling_Factorial.dSYM/
+.DS_Store
