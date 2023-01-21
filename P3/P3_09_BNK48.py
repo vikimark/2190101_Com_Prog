@@ -29,11 +29,19 @@ def election(test):
                 candidate[candid].add(voter)
             else:
                 candidate[candid].add(voter)
-        print(candidate)
         high_score = sorted(candidate, key=lambda x:len(candidate[x]), reverse=True)[:3]
         ans.append(", ".join(high_score))
     elif a == '3':
-        
+        voters = {}
+        for info in infos:
+            voter, candid, score = info
+            score = int(score)
+            if voter not in voters:
+                voters[voter] = {candid:score}
+            elif candid not in voters[voter][candid]:
+                voters[voter][candid] = score
+            else:
+                voters[voter][candid] += score
     return ans
 
 for i, test in enumerate(testcase):
