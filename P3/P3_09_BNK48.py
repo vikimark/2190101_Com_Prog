@@ -38,10 +38,18 @@ def election(test):
             score = int(score)
             if voter not in voters:
                 voters[voter] = {candid:score}
-            elif candid not in voters[voter][candid]:
+            elif candid not in voters[voter]:
                 voters[voter][candid] = score
             else:
                 voters[voter][candid] += score
+        high_score = {}
+        for _, candid in voters.items():
+            candid = sorted(sorted(candid), key=lambda x:candid[x], reverse=True)[0]
+            if candid not in high_score:
+                high_score[candid] = 1
+            else:
+                high_score[candid] += 1
+        ans.append(", ".join(sorted(sorted(high_score), key=lambda x:high_score[x], reverse=True)[:3]))
     return ans
 
 for i, test in enumerate(testcase):
