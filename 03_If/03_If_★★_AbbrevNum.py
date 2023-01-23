@@ -1,3 +1,4 @@
+import math
 subfix = ['K', 'M', 'B']
 n = input()
 if len(n) <= 3:
@@ -12,4 +13,4 @@ elif len(n) > 3 and len(n) < 13:
         n = int(n)
     print("{}{}".format(n,sub))
 else:
-    print(str(round(int(n[0:-8]), -1))[:-1]+'B')
+    print(str(math.ceil(int(n[0:-8])/10.))+'B')
