@@ -13,6 +13,5 @@ for i, value in enumerate(scores):
         max = value
         max_ind = i
     sum += value
-sum = round(sum, 5)
 sum = (sum - scores[min_ind] - scores[max_ind])/2.
-print(sum)
+print(round(sum, 2))
