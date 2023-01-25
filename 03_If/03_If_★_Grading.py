@@ -1,11 +1,2 @@
 s=float(input())
-if s >= 80:
-    print("A")
-elif s >= 70:
-    print("B")
-elif s >= 60:
-    print("C")
-elif s >= 50:
-    print("D")
-else:
-    print("F")
+print("A" if s>=80 else "B" if s >=70 else "C" if s>=60 else "D" if s>=50 else "F")
