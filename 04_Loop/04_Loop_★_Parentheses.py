@@ -1,0 +1,1 @@
+print(*["[" if s=='(' else '(' if s=='[' else ")" if s==']' else ']' if s==')' else s for s in input()],sep="")
