@@ -23,5 +23,6 @@ if a != '-1':
             ans.insert(0, a)
         count+=1
         a=input()
-
-print(ans)
+    if '' in ans:
+        ans = ans.remove('')
+print(list(map(int, ans)))

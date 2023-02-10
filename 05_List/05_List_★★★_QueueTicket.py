@@ -20,4 +20,4 @@ for k in range(n):
         t.append(int(c[1]) - p_time)
         print("qtime", c_call, t[-1])
     elif c[0] == 'avg_qtime':
-        print("avq_qtime", round(sum(t)/len(t), 4))
+        print("avg_qtime", round(sum(t)/len(t), 4))
