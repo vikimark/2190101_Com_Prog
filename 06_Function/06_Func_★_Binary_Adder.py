@@ -1,2 +1,2 @@
-b1,b2 = [int(x,2) for x in input().split()]
-print(bin(b1+b2)[2:])
+a,b = input.split()
+print(bin(int(a,2)+int(b,2))[2:])
