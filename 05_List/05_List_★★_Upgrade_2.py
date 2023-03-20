@@ -12,5 +12,6 @@ for id in input().split():
             info[1] = info[1]-1 if info[1] != 0 else info[1]
 ids = sorted(ids, key=lambda x: x[0])
 
+
 for info in ids:
     print(info[0], grades[info[1]])
